@@ -24,13 +24,13 @@ function submitForm(evt) {
     const promise = createPromise(i, delayPromise)
       .then(({ position, delay }) => {
         showNotification(
-          `✅ Fulfilled promise ${position} in ${delay}ms`,
+          `✅ Виконано проміс ${position} in ${delay}ms`,
           'success'
         );
       })
       .catch(({ position, delay }) => {
         showNotification(
-          `❌ Rejected promise ${position} in ${delay}ms`,
+          `❌ Відхилено проміс ${position} in ${delay}ms`,
           'failure'
         );
       });
